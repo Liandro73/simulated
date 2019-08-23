@@ -1,3 +1,10 @@
 Manifest-Version: 1.0
-Class-Path: 
+Implementation-Title: simulated
+Implementation-Version: 1.0.0-SNAPSHOT
+Built-By: cristiano
+Implementation-Vendor-Id: br.com.simulated
+Build-Jdk: 1.8.0_221
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/simulated
+Created-By: Maven Integration for Eclipse
 

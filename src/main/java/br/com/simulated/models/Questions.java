@@ -22,7 +22,6 @@ public class Questions {
 	@Column(name = "reply", length = 200, nullable = false)
 	private String reply;
 	
-	
 	public Long getId() {
 		return id;
 	}
