@@ -18,28 +18,28 @@ import br.com.simulated.repository.QuestionRepository;
 @RequestMapping("/")
 public class QuestionController {
 	
-	private QuestionRepository qr;
+	private QuestionRepository repository;
 	
 	@Autowired
 	public QuestionController(QuestionRepository qr) {
-		this.qr = qr;
+		this.repository = qr;
 	}
 	
 	@GetMapping(produces="application/json")
 	public @ResponseBody Iterable<Questions> insertQuestion() {
-		Iterable<Questions> insertQuestion = qr.findAll();
+		Iterable<Questions> insertQuestion = repository.findAll();
 		return insertQuestion;
 	}
 	
 	@PostMapping()
 	public String insertQuestion(@RequestBody @Valid Questions question) {
-		qr.save(question);
+		repository.save(question);
 		return "redirect:/";
 	}
 	
 	@DeleteMapping()
 	public String deleteQuestion(@RequestBody Questions question) {
-		qr.delete(question);
+		repository.delete(question);
 		return "redirect:/";
 	}
 }
